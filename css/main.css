@@ -1,0 +1,558 @@
+
+::-webkit-scrollbar{
+  display:none;
+
+}
+  *{
+    margin:0;
+    padding:0;
+  }
+  html,body{
+    height:100%;
+    overflow:hidden;
+  }
+  ul,li{
+    list-style:none;
+
+  }
+  a{
+    text-decoration:none;
+    cursor:pointer;
+
+  }
+  button{
+      cursor:pointer;
+  }
+  .wrapper{
+    position:relative;
+    width:100%;
+    height:100%;
+  }
+  header {
+    position:fixed;
+    width:100%;
+    top:0;
+    height:70px;
+    background-color: rgba(0,120,120,1.0);
+    z-index:50;
+  }
+  header .menu{
+    display:none;
+  }
+  header nav {
+    float:left;
+   display:inline-block;
+   text-align: center;
+   line-height:70px;
+   width:100%;
+  }
+  header nav ul {
+    height:70px;
+  }
+  header nav ul li {
+    display:inline-block;
+    text-align: center;
+    width:160px;
+    font-size:25px;
+  }
+  header nav ul li a {
+    line-height:70px;
+    font-family: 'Lobster', cursive;
+    color:#FFF;
+  }
+  /*//header끝//*/
+
+  .btngroup{
+    position:relative;
+    top:50%;
+    z-index:50;
+
+  }
+  .portlist li a{
+      display:inline-block;
+  }
+  @keyframes prev {
+             0%{margin-right:-100px; }
+             25%{margin-left:10px; }
+             }
+  @keyframes next {
+             0%{margin-left:-100px; }
+             25%{margin-right:10px; }
+             }
+  .btngroup button{background-color:transparent;
+    text-indent:-9999px;
+
+  }
+  .btngroup button.next{
+    position:absolute;
+    right:0;
+    background-image:url(../img/right-arrow.png);
+    background-position:0 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    border:0;
+    width:60px;
+    height:60px;
+    animation: next 1s infinite;
+  }
+  .btngroup button.prev{
+    position:absolute;
+    left:0;
+    background-image:url(../img/left-arrow.png);
+    background-position:0 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    border:0;
+    width:60px;
+    height:60px;
+    animation: prev 1s infinite;
+  }
+
+  /*//버튼끝*/
+  .container {position:relative;
+    top:0;
+    height:100%;
+
+  }
+  .container section {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    right:0;
+    left:0;
+  }
+  .container section.intro{
+    display:block;
+  }
+  /*.container section.intro video {*/
+  /*  width:100%;*/
+
+  /*}*/
+  /*.container section.intro img {*/
+  /*  width:100%;*/
+  /*}*/
+  .container section.intro .row {
+    position:relative;
+    background-image:url(../img/bgmain.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100%;
+  }
+  .titlecenter{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:38%;
+  }
+
+  .titlecenter h1 {
+    text-align:center;
+    vertical-align:middle;
+  }
+  .titlecenter h1 span.name{
+    font-size: 6em;
+    font-family: 'Lobster', cursive;
+  }
+  .titlecenter h1 span {
+    font-size: 1.3em;
+    font-weight: normal;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .container section.aboutme
+  {
+    display:none;
+    background-color:#FFF;
+  }
+  .container section.aboutme .aboutme-wrap{
+    position:relative;
+    width:100%;
+    height:100%;
+  }
+  .container section.aboutme .aboutme-wrap .heading{
+    position:relative;
+    width:100%;
+    top:70px;
+  }
+  .container section.aboutme h2{
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Noto Sans';
+    margin-top: 50px;
+    margin-bottom:30px;
+  }
+  .container section.aboutme .profile {
+    position: relative;
+    left: 23%;
+    display:block;
+    margin-top: 120px;
+    margin-bottom: 5%;
+  }
+  .container section.aboutme .profileimg {
+    float:left;
+    width:450px;
+  }
+  .container section.aboutme .profile img {
+    width:100%;
+  }
+  .container section.aboutme .profile-data{
+    float: left;
+    margin-left: 5%;
+  }
+  .container section.aboutme .profile-data img{
+    height: 25px;
+    width:25px;
+
+  }
+
+  .container section.aboutme .skill .profile-data span{
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 55px;
+    vertical-align: top;
+  }
+  .container section.aboutme .aboutme-wrap .skillsec {
+    position: relative;
+    margin-left: 1.5%;
+    margin-top: 5%;
+    width: 430px;
+}
+  .container section.aboutme .aboutme-wrap .skillsec li.skillbar {
+    position:relative;
+  	display:block;
+  	margin-bottom:15px;
+  	width:100%;
+  	background:#eee;
+  	height:35px;
+  	border-radius:3px;
+  	-moz-border-radius:3px;
+  	-webkit-border-radius:3px;
+  	-webkit-transition:0.4s linear;
+  	-moz-transition:0.4s linear;
+  	-ms-transition:0.4s linear;
+  	-o-transition:0.4s linear;
+  	transition:0.4s linear;
+  	-webkit-transition-property:width, background-color;
+  	-moz-transition-property:width, background-color;
+  	-ms-transition-property:width, background-color;
+  	-o-transition-property:width, background-color;
+  	transition-property:width, background-color;
+  }
+  .container section.aboutme .aboutme-wrap .skillsec .skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+	width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+.container section.aboutme .aboutme-wrap .skillsec .skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.container section.aboutme .aboutme-wrap .skillsec .skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+.container section.aboutme .aboutme-wrap .skillsec .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+     border-top-left-radius: 3px;
+     border-bottom-left-radius: 3px;
+}
+.container section.aboutme .aboutme-wrap .skillsec .skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+/*portoflio*/
+  .container section.portfolio {
+    display:none;
+  }
+  .container section.portfolio .page3_wrap {
+    position:relative;
+    background-image:url(../img/mac3.jpg);
+    background-position :center top;
+    background-repeat:no-repeat;
+    background-size: cover;
+    top:70px;
+    height:100%;
+    overflow-style:none;
+    -ms-overflow-style:none;
+  }
+
+  .container section.portfolio .page3_wrap .wrap {
+    background-color:rgba(255,255,255,0.6);
+    position:relative;
+    left:15%;
+    width:70%;
+    height:70%;
+    top:10%;
+    border-radius : 15px;
+    overflow-y: scroll;
+  }
+  .container section.portfolio .page3_wrap .wrap .portlist{
+    padding:20px 0px 20px 0px;
+
+  }
+
+  .container section.portfolio .page3_wrap .wrap .portlist ul {
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+  }
+  .container section.portfolio .page3_wrap .wrap .portlist ul li {
+    width:360px;
+    display:inline-block;
+    margin-left:15px;
+    position:relative;
+    margin-top:15px;
+  }
+  .container section.portfolio .page3_wrap .wrap .portlist ul li a img {
+    width:100%;
+    overflow:hidden;
+
+  }
+
+  .over{
+    cursor:pointer;
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    color: #fff;
+    font-family:'NanumGothic', dotum, 돋움, sans-serif;
+    font-weight:normal;
+    line-height:1.8em;
+    text-align:center;
+    vertical-align: bottom;
+  }
+  .over strong {
+    font-size: 1.5em;
+    color: #fc94af;
+  }
+  .over a {
+    display:inline-block;
+  }
+  .up {
+    z-index :45;
+  }
+  .over.on {
+    display:block;
+  }
+
+/*//769px*/
+
+   @media only screen and (max-width: 769px){
+    section.aboutme {
+      overflow-y:scroll;
+      overflow-x:hidden;
+    }
+    header {
+      height:60px;
+    }
+    header nav{
+      display:none;
+    }
+    header nav ul {
+      position:absolute;
+      top:0;
+      right:0;
+      margin-top:60px;
+    }
+    header nav ul li{
+      display:block;
+      width:130px;
+      position:relative;
+      text-align:center;
+      line-height:50px;
+      height:50px;
+      background-color:#CCC;
+      opacity: 0.8
+    }
+    header nav ul li a {
+      line-height:0;
+    }
+    header nav ul li a:hover {
+            color:black;
+            opacity:1;
+        }
+    header .menu{
+      display:block;
+      position:absolute;
+      top:5px;
+      right:20px;
+      width:50px;
+      height:50px;
+      background-image:url(../img/menu-options.png);
+      background-position:0 0;
+      background-repeat:no-repeat;
+      background-size:cover;
+      border:0;
+      text-indent:-9999px;
+      background-color:transparent;
+    }
+    .container section.portfolio .page3_wrap{
+      top:60px;
+    }
+    .titlecenter h1 span.name {
+    font-size: 4em;
+    }
+    .titlecenter h1 span {
+    font-size: 1em;
+    }
+    .container section.aboutme .profile {
+    left: 18%;
+    }
+    .container section.aboutme .profile-data {
+      margin-top:30px;
+      margin-left:0;
+      margin-bottom:40px;
+    }
+    .btngroup button.prev, .btngroup button.next{
+      display:none;
+    }
+
+
+   }
+
+   /*/481/*/
+   @media only screen and (max-width: 481px){
+     header {
+      height:50px;
+    }
+    header nav{
+      display:none;
+    }
+    header nav ul {
+      position:absolute;
+      top:0;
+      right:0;
+      margin-top:50px;
+    }
+    header nav ul li{
+      display:block;
+      width:130px;
+      position:relative;
+      text-align:center;
+      line-height:50px;
+      height:50px;
+      background-color:#CCC;
+      opacity: 0.8
+    }
+    header nav ul li a {
+      line-height:0;
+    }
+    header nav ul li a:hover {
+            color:black;
+            opacity:1;
+        }
+    header .menu{
+      display:block;
+      position:absolute;
+      top:5px;
+      right:20px;
+      width:40px;
+      height:40px;
+      background-image:url(../img/menu-options.png);
+      background-position:0 0;
+      background-repeat:no-repeat;
+      background-size:cover;
+      border:0;
+      text-indent:-9999px;
+      background-color:transparent;
+    }
+    .container section.portfolio .page3_wrap{
+      top:50px;
+    }
+    .titlecenter h1 span.name {
+    font-size: 2.5em;
+    }
+    .btngroup button.prev, .btngroup button.next {
+      display:none;
+    }
+    .container section.aboutme h2 {
+          font-size: 3em;
+    }
+    .container section.aboutme .profile {
+    left: 10%;
+    }
+    .container section.aboutme .profileimg {
+      width:300px;
+    }
+    .container section.aboutme .aboutme-wrap .skillsec {
+      width: 300px;
+      margin-top:25px;
+    }
+    .container section.aboutme .aboutme-wrap .skillsec .skillbar-title {
+      width:100px;
+
+    }
+    .container section.aboutme .skill .profile-data span{
+      font-size:11px;
+    }
+    .container section.aboutme .aboutme-wrap .skillsec .skill-bar-percent{
+      font-size:9px;
+    }
+    .container section.portfolio .page3_wrap .wrap .portlist ul li{
+      width:290px;
+      margin-left:0;
+    }
+    .container section.portfolio .page3_wrap .wrap {
+    background-color:rgba(255,255,255,0);
+    position:relative;
+    left:4%;
+    width:90%;
+    min-width:300px;
+    height:90%;
+    top:2%;
+    /*border-radius : 15px;*/
+    overflow-y: scroll;
+    }
+
+   }
